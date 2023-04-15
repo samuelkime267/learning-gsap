@@ -1,0 +1,74 @@
+.card {
+  margin: 20px;
+  perspective: 600px;
+}
+
+.faces {
+  width: 160px;
+  height: 220px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  border: 8px solid white;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.face > * {
+  backface-visibility: hidden;
+}
+
+.front {
+  background: #ffcc32;
+  /*added for mobile browsers*/
+  transform: translateZ(1px);
+}
+
+.back {
+  transform: rotateY(180deg);
+  background: repeating-linear-gradient(
+    70deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+  );
+}
+
+.loser .front {
+  background: black;
+}
+
+.loser img {
+  filter: saturate(0);
+}
+
+/* page layout */
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  margin: 0;
+  font-size: 20px;
+  background: #1d1d1d;
+}
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+}

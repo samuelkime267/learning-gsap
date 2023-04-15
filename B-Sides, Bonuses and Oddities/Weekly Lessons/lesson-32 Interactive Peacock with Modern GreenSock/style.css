@@ -1,0 +1,43 @@
+* {
+  position: relative;
+}
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffc107;
+  background: linear-gradient(to bottom, #ff9800 0%, #ffc107 40%);
+}
+
+.peacock-body {
+  width: 122px;
+  height: 258px;
+  background-image: url("https://assets.codepen.io/32887/body.png");
+  z-index: 200;
+}
+
+.feathers {
+  width: 95px;
+  height: 288px;
+  position: absolute;
+  left: 25px;
+  top: -80px;
+}
+.feather {
+  position: absolute;
+  width: 95px;
+  height: 288px;
+  background-image: url("https://assets.codepen.io/32887/feather.png");
+}
+
+.peacock {
+  cursor: pointer;
+  /* border:1px solid red; */
+}
